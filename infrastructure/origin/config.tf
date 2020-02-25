@@ -10,5 +10,16 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region = "eu-west-1"
+}
+
+# -----------
+
+locals {
+  tags = {
+    Project      = 1345
+    Automated    = true
+    BU           = "RD"
+    BillingCycle = "FULL"
+  }
 }

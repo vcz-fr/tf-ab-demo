@@ -23,6 +23,8 @@ resource "aws_lambda_function" "lbd-decision" {
       TABLE_NAME = aws_dynamodb_table.table.name
     }
   }
+
+  tags = local.tags
 }
 
 # ----------
@@ -52,4 +54,6 @@ resource "aws_lambda_function" "lbd-statistics" {
       TABLE_NAME = aws_dynamodb_table.table.name
     }
   }
+
+  tags = local.tags
 }

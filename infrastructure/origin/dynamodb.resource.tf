@@ -15,10 +15,5 @@ resource "aws_dynamodb_table" "table" {
     type = "S"
   }
 
-  tags = {
-    Project      = 1345
-    Automated    = true
-    BU           = "RD"
-    BillingCycle = "FULL"
-  }
+  tags = local.tags
 }

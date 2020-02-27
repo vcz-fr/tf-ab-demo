@@ -1,0 +1,24 @@
+# Deny all
+*
+
+# Global files
+!.gitignore
+!LICENSE
+!README.md
+
+# Infrastructure code
+!infrastructure/
+!infrastructure/origin/
+!infrastructure/origin/*.tf
+
+# Application
+!application/
+!application/lambdas/
+!application/lambdas/*/
+!application/lambdas/*/*.js
+
+!application/layers/
+!application/layers/*/
+!application/layers/*/nodejs/
+!application/layers/*/nodejs/node_modules/
+!application/layers/*/nodejs/node_modules/*.js

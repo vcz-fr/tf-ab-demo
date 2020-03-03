@@ -1,6 +1,6 @@
 data "archive_file" "lbd-decision" {
   type        = "zip"
-  source_dir  = "../../application/lambdas/decision"
+  source_dir  = "../application/lambdas/decision"
   output_path = ".out/lbd-decision.zip"
 }
 
@@ -31,7 +31,7 @@ resource "aws_lambda_function" "lbd-decision" {
 
 data "archive_file" "lbd-statistics" {
   type        = "zip"
-  source_dir  = "../../application/lambdas/statistics"
+  source_dir  = "../application/lambdas/statistics"
   output_path = ".out/lbd-statistics.zip"
 }
 

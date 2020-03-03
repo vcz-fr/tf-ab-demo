@@ -8,8 +8,7 @@
 
 # Infrastructure code
 !infrastructure/
-!infrastructure/origin/
-!infrastructure/origin/*.tf
+!infrastructure/*.tf
 
 # Application
 !application/

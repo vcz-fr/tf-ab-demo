@@ -2,7 +2,7 @@
 data "archive_file" "lyr-crud" {
   type = "zip"
 
-  source_dir  = "../../application/layers/crud"
+  source_dir  = "../application/layers/crud"
   output_path = ".out/lyr-crud.zip"
 }
 

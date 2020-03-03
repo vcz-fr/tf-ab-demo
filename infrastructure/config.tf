@@ -1,25 +1,11 @@
-# This is the Interconnection layer.
-# Its sole purpose is to connect modules and resources at the project level.
-
-# This main file belongs to the local *origin*.
-# An *origin* is a way to describe a root module when your project does not
-# have one but multiple connecting to the same underlying modules and resources.
-
+# [INFO] Define global Terraform attributes
 terraform {
-  required_version = "~> 0.12.9"
+  required_version = "~> 0.12.18"
 }
 
+# [INFO] Define the default deployment region
+# eu-west-1 -> Ireland
 provider "aws" {
-  region = "eu-west-1"
-}
-
-# -----------
-
-locals {
-  tags = {
-    Project      = 1345
-    Automated    = true
-    BU           = "RD"
-    BillingCycle = "FULL"
-  }
+  region  = "eu-west-1"
+  version = "~> 2.51"
 }

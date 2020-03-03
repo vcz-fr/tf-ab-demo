@@ -1,3 +1,4 @@
+# [INFO] This role allows Lambda functions -as per the Principal- to access DynamoDB
 resource "aws_iam_role" "role" {
   name               = "role-lambda"
   assume_role_policy = <<EOF

@@ -8,7 +8,7 @@ exports.handler = async (event, _) => {
         event.queryStringParameters;
 
     let statusCode = 400;
-    let body = "";
+    let body = "Done!";
 
     switch (event.httpMethod) {
         case 'POST':
@@ -31,6 +31,7 @@ exports.handler = async (event, _) => {
             break;
 
         default:
+            body = "Unknown method!"
             break;
     }
 

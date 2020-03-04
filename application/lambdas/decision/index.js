@@ -12,7 +12,7 @@ exports.handler = async (event, _) => {
 
     switch (event.httpMethod) {
         case 'POST':
-            await Promise.all(requestBody.decisions.map(async decision => await CRUD.createItem({
+            await Promise.allSettled(requestBody.decisions.map(async decision => await CRUD.createItem({
                 uid: requestBody.uid,
                 did: decision.id,
                 d_in: decision.input
@@ -21,7 +21,7 @@ exports.handler = async (event, _) => {
             break;
 
         case 'PATCH':
-            await Promise.all(requestBody.decisions.map(async decision => await CRUD.updateItem({
+            await Promise.allSettled(requestBody.decisions.map(async decision => await CRUD.updateItem({
                 uid: requestBody.uid,
                 did: decision.id,
             }, {
